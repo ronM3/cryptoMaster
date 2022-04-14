@@ -1,0 +1,614 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+}
+.parallax_background {
+  background-image: url(images/bitcoin-laptop.jpg);
+  height: 110%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax_second {
+  background-image: url(images/phone.jpg);
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax_third {
+  background-image: url(images/bitcoin-laptop.jpg);
+  height: 200%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.crypto_icon {
+  margin-top: -5px;
+}
+.navbar-brand {
+  font-style: italic;
+  font-family: "Bree Serif", serif;
+}
+.firstHeading {
+  text-align: center;
+  font-family: Georgia, sans-serif;
+  font-size: 3em;
+  background-color: rgb(7, 5, 48);
+  color: white;
+  margin-top: 1px;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 15px;
+  font-weight: 300;
+}
+.secondHeading {
+  text-align: center;
+  margin-top: -30px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 2em;
+  letter-spacing: -2px;
+  border-bottom: 2px solid black;
+  text-transform: uppercase;
+}
+.cards-containers {
+  display: grid;
+  margin-left: 110px;
+  grid-template-columns: repeat(4, 0.8fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 15px;
+}
+.card {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 0px;
+  border: solid 1px grey;
+  height: 180px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+.card:hover {
+  box-shadow: 18px 10px 22px 4px rgba(100, 99, 99, 0.2);
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.counter {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  margin-left: -1px;
+  margin-top: -92px;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  height: 45px;
+  background-color: rgb(36, 5, 65);
+  font-weight: 500;
+}
+.counter data-content {
+  visibility: hidden;
+  opacity: 1;
+}
+
+.counter:hover data-content {
+  visibility: visible;
+  opacity: 1;
+}
+.details_button {
+  margin-top: 10px;
+  margin-left: 20px;
+  background-color: #4a70ac;
+}
+.card_title {
+  margin-top: -35px;
+  margin-left: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+}
+.coin_image {
+  margin-top: -18px;
+  margin-left: -8px;
+}
+.coin_Symbul {
+  color: gray;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.form-switch .form-check-input {
+  margin-left: 11em;
+  width: 4.5em;
+  position: absolute;
+}
+.form-check-input {
+  margin-top: -4rem;
+  height: 2em;
+}
+.form-check .form-switch {
+  margin-bottom: 10px;
+  position: absolute;
+}
+.box_size {
+  border: none;
+  height: 80px;
+  width: 165px;
+  padding: 2px 0 5px 5px;
+  font-size: 15px;
+  margin-top: -20px;
+  background-color: transparent;
+  text-align: left;
+  position: fixed;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  animation: fadeIn 0.8s;
+  -webkit-animation: fadeIn 0.7s;
+  -moz-animation: fadeIn 0.7s;
+  -o-animation: fadeIn 0.7s;
+  -ms-animation: fadeIn 0.7s;
+}
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes auto-progress {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+.moreInfo_heading {
+  font-size: 16px;
+}
+.price_change {
+  position: fixed;
+  margin-top: -15px;
+  margin-left: 220px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+.percentage {
+  position: fixed;
+  margin-left: 200px;
+  margin-top: 10px;
+  color: rgb(29, 164, 80);
+}
+.progress-bar {
+  background-color: #1a1a1a;
+  height: 25px;
+  width: 125px;
+  display: none;
+  margin: 0 30px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+}
+.stripes {
+  background-size: 30px 30px;
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+.stripes.animated {
+  animation: animate-stripes 1s linear infinite;
+}
+.stripes.animated.slower {
+  animation-duration: 1.25s;
+}
+.stripes.reverse {
+  animation-direction: reverse;
+}
+.progress-bar-inner {
+  display: block;
+  height: 25px;
+  width: 0%;
+  background-color: #34c2e3;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  position: relative;
+  animation: auto-progress 2s infinite linear;
+}
+
+.modal-content {
+  width: auto;
+  margin-left: -220px;
+  display: inline-block;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.model-heading {
+  text-align: center;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 2em;
+  letter-spacing: -2px;
+  border-bottom: 2px solid black;
+  text-transform: uppercase;
+}
+.modal-second-heading {
+  text-align: center;
+}
+#modal-coins-body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+#modal-coins-body .form-check {
+  position: fixed;
+  max-width: 60px;
+  margin-left: -80px;
+}
+#modal-coins-body .card {
+  max-width: 233px;
+}
+#modal-coins-body .details_button {
+  margin: 30px 0 30px 50px;
+}
+#modal-coins-body .form-switch .form-check-input {
+  margin-top: -4.5rem;
+  margin-left: 13.9em;
+  max-width: 60px;
+}
+#modal-coins-body .box_size {
+  margin-top: -5px;
+}
+#modal-coins-body .progress-bar {
+  margin-top: 40px;
+}
+#modal-coins-body .price_change {
+  position: fixed;
+  margin-top: -25px;
+  margin-left: 177px;
+}
+#modal-coins-body .percentage {
+  margin-top: -5px;
+  margin-left: 152px;
+}
+.modal-footer {
+  position: relative;
+}
+.missingError {
+  margin-left: 50px;
+  border-radius: 16px;
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  font-style: italic;
+  max-width: 220px;
+}
+.about_Container {
+  background: white;
+  opacity: 0.85;
+  margin-top: -12px;
+  transition: transform 1s;
+  box-shadow: 6px 6px 6px 12px white;
+  font-family: "Righteous", cursive;
+  margin-left: 280px;
+  height: 560px;
+  width: 720px;
+  animation: fadeIn 3s;
+  overflow-y: hidden;
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation: fadeIn 3s;
+}
+.about_Heading {
+  font-size: 40px;
+  color: rgb(5, 5, 5);
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+}
+.about_secondH {
+  margin-left: 20px;
+}
+.about_info {
+  margin-left: 20px;
+}
+.about_image {
+  display: flex;
+  height: 250px;
+  margin-top: -25px;
+  margin-left: 450px;
+  border-radius: 30%;
+}
+.social {
+  width: 160px;
+  margin-left: 510px;
+  margin-top: 5px;
+}
+.fa {
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 50%;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.chart {
+  display: none;
+  margin: -60px 256px 111px;
+  height: 530px;
+  width: 1000px;
+  border-style: groove;
+  transition: transform 1s;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+.progress-page {
+  margin-left: 550px;
+  height: 80px;
+}
+.progress-page img {
+  height: 200px;
+}
+.hwrap {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3.1rem;
+  background: rgba(0, 0, 0, 0.68);
+  padding-left: 100%;
+  box-sizing: content-box;
+  z-index: 999;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  align-items: center;
+  flex: 1 1 0%;
+  white-space: nowrap;
+  will-change: transform;
+}
+.hmove {
+  display: flex;
+  height: 3.8rem;
+  line-height: 4rem;
+  white-space: nowrap;
+  padding-right: 100%;
+  box-sizing: content-box;
+  align-items: center;
+  height: 50px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+}
+.hitem {
+  display: inline-block;
+  padding: 0 2rem;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.23em;
+  color: rgb(255, 255, 255);
+  animation-duration: 200s;
+}
+
+@keyframes tickerh {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-400%, 0, 0);
+  }
+}
+@keyframes tickerh {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-1000%, 0, 0);
+  }
+}
+
+.hmove {
+  animation: tickerh linear 150s infinite;
+}
+.hmove:hover {
+  animation-play-state: paused;
+}
+.scroll-bar-image {
+  height: 30px;
+  width: 30px;
+}
+.scroll-bar-name {
+  margin: 0px 0px 0px 4px;
+  font-weight: 600;
+  font-size: 0.875em;
+  color: rgb(255, 255, 255);
+}
+.scroll-bar-price {
+  font-weight: 400;
+  font-size: 0.87em;
+  color: rgb(255, 255, 255);
+}
+.scroll-bar-price-change {
+  font-weight: 500;
+  font-size: 0.875em;
+  color: rgb(29, 164, 80);
+}
+.scroll-bar-price-change-red {
+  font-weight: 500;
+  font-size: 0.875em;
+  color: rgb(231, 76, 59);
+}
+.empty-report {
+  margin-left: 260px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  transition: transform 1s;
+  border: none;
+  opacity: 0.8;
+  transform-style: preserve-3d;
+  animation: fadeIn 6s;
+  -webkit-animation: fadeIn 6s;
+  -moz-animation: fadeIn 6s;
+  -o-animation: fadeIn 6s;
+  -ms-animation: fadeIn 6s;
+}
+.no-coins-error {
+  margin-top: -15px;
+  width: 750px;
+  border: none;
+  height: 400px;
+}
+.typing-demo {
+  width: 40ch;
+  margin-top: 5px;
+  background-color: transparent;
+  display: fixed;
+  border: none;
+  margin-left: 40px;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+#myBtn{
+  position: fixed;
+  transition: .2s;
+  bottom: 2.8rem;
+  right: 1.5rem;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 2px;
+}

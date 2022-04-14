@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+  <title>Crypto</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+      <img src="images/coin_icon.png" width="30" height="30" class="crypto_icon" alt="image not found">
+      CryptoMaster
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" id="homeB" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="liveReportB" href="#">Live Reports</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="aboutB" href="#">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Languages
+            <img src="images/flags/global.png" width="25" height="23" class="crypto_icon" alt="">
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">
+              <img src="images/flags/united-states.png" width="25" height="23"><span> English</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <img src="images/flags/france.png" width="25" height="23"><span> France</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <img src="images/flags/germany.png" width="25" height="23"><span> Germany</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <span class="search-error" id="searchError"></span>
+        <input class="form-control mr-sm-2" type="search" placeholder="Search for coin.." id="searchInput"
+          aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" id="searchButton" type="submit">Search</button>
+      </div>
+    </div>
+  </nav>
+  <div class="parallax_background" id="pageBody">
+    <h1 class="firstHeading">:: Cryptocurrency Desk ::</h1>
+    <hr>
+    <h4 class="secondHeading" id="secondHead">You can truck up to 5 coins</h4>
+    <button type="button" tabindex="0" data-trigger="focus" id="counterB" class="counter"
+      data-container="body" data-toggle="popover" data-placement="top" data-content="Click to uncheck all coins">
+      Selected Amount <span class="badge badge-light" id="counterToggle">0</span>
+    </button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+    <div class="hwrap">
+      <div class="hmove" id="tickerContainer">
+      </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <h5 class="model-heading">Live reports support only up to 5 coins at once.</h5>
+          <h5 class="modal-second-heading">Note: if you unchecked one of the coins here and click on close, That will
+            allow a withdrawal from the required action and also take effect on the unchecked coin.</h5>
+          <div class="modal-body" id="modal-coins-body">
+          </div>
+          <div class="modal-footer">
+            <span id="missing" class="missingError"></span>
+            <button type="button" id="saveModal" class="btn btn-primary popover-test">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="coinsContainer" class="cards-containers"></div>
+
+    <div id="chartContainer" class="chart"></div>
+
+
+
+  </div>
+
+
+
+
+
+
+  <div class="parallax_second"></div>
+
+  <div class="parallax_third"></div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script> -->
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
